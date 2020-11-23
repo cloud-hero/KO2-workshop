@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: red
+  name: red-svc
+  namespace: red
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: red
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: green
+  name: green-svc
+  namespace: green
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: green
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: blue
+  name: blue-svc
+  namespace: blue
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: blue
