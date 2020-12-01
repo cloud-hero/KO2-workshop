@@ -6,10 +6,12 @@ metadata:
   name: red-svc
   namespace: red
 spec:
+  type: NodePort
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
+    nodePort: 30123
   selector:
     run: red
 
@@ -23,10 +25,12 @@ metadata:
   name: green-svc
   namespace: green
 spec:
+  type: NodePort
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
+    nodePort: 30124
   selector:
     run: green
 
@@ -40,9 +44,11 @@ metadata:
   name: blue-svc
   namespace: blue
 spec:
+  type: NodePort
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
+    nodePort: 30125
   selector:
     run: blue
