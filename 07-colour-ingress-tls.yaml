@@ -16,7 +16,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: red-svc
+            name: red-svc-ci
             port:
               number: 80
 
@@ -40,7 +40,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: green-svc
+            name: green-svc-ci
             port:
               number: 80
 
@@ -64,6 +64,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: blue-svc
+            name: blue-svc-ci
             port:
               number: 80
