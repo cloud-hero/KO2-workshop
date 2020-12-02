@@ -17,4 +17,3 @@ spec:
       weight: 100
     mirror:
       host: blue-svc-ci.blue.svc.cluster.local
-    mirror_percent: 100
