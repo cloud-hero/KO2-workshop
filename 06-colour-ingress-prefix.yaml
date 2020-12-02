@@ -7,7 +7,8 @@ metadata:
       nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: "colour.ko2.com"
+    http:
       paths:
       - path: /red
         pathType: Prefix
@@ -28,7 +29,8 @@ metadata:
       nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: "colour.ko2.com"
+    http:
       paths:
       - path: /green
         pathType: Prefix
@@ -49,7 +51,8 @@ metadata:
       nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: "colour.ko2.com"
+    http:
       paths:
       - path: /blue
         pathType: Prefix
