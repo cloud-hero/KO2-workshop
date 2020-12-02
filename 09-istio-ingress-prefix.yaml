@@ -2,6 +2,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: red-vs-prefix
+  namespace: red
 spec:
   gateways:
   - red-gw-prefix
@@ -26,6 +27,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: red-gw-prefix
+  namespace: red
 spec:
   selector:
     istio: ingressgateway
@@ -43,6 +45,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: green-vs-prefix
+  namespace: green
 spec:
   gateways:
   - green-gw-prefix
@@ -67,6 +70,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: green-gw-prefix
+  namespace: green
 spec:
   selector:
     istio: ingressgateway
@@ -84,6 +88,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: blue-vs-prefix
+  namespace: blue
 spec:
   gateways:
   - blue-gw-prefix
@@ -108,6 +113,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: blue-gw-prefix
+  namespace: blue
 spec:
   selector:
     istio: ingressgateway
