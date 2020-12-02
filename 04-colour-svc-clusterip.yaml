@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     run: red
-  name: red-svc
+  name: red-svc-ci
   namespace: red
 spec:
   type: ClusterIP
@@ -21,7 +21,7 @@ kind: Service
 metadata:
   labels:
     run: green
-  name: green-svc
+  name: green-svc-ci
   namespace: green
 spec:
   type: ClusterIP
@@ -39,7 +39,7 @@ kind: Service
 metadata:
   labels:
     run: blue
-  name: blue-svc
+  name: blue-svc-ci
   namespace: blue
 spec:
   type: ClusterIP

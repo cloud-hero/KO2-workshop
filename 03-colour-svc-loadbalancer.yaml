@@ -3,15 +3,14 @@ kind: Service
 metadata:
   labels:
     run: red
-  name: red-svc-np
+  name: red-svc-lb
   namespace: red
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
-    nodePort: 30123
   selector:
     run: red
 
@@ -22,15 +21,14 @@ kind: Service
 metadata:
   labels:
     run: green
-  name: green-svc-np
+  name: green-svc-lb
   namespace: green
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
-    nodePort: 30124
   selector:
     run: green
 
@@ -41,14 +39,13 @@ kind: Service
 metadata:
   labels:
     run: blue
-  name: blue-svc-np
+  name: blue-svc-lb
   namespace: blue
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
-    nodePort: 30125
   selector:
     run: blue
