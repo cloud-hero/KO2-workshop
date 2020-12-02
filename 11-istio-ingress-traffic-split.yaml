@@ -15,13 +15,11 @@ spec:
         port:
           number: 80
       weight: 33
-  - route:
     - destination:
         host: green-svc-ci.green.svc.cluster.local
         port:
           number: 80
       weight: 33
-  - route:
     - destination:
         host: blue-svc-ci.blue.svc.cluster.local
         port:
