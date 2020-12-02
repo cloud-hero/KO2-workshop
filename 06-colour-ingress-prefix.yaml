@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: red-ingress
+  name: red-ingress-prefix
   namespace: red
   annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /
@@ -23,7 +23,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: green-ingress
+  name: green-ingress-prefix
   namespace: green
   annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /
@@ -45,7 +45,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: blue-ingress
+  name: blue-ingress-prefix
   namespace: blue
   annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /
