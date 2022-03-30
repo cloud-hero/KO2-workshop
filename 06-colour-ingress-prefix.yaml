@@ -6,6 +6,7 @@ metadata:
   annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - host: "colour.ko2.com"
     http:
@@ -28,6 +29,7 @@ metadata:
   annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - host: "colour.ko2.com"
     http:
@@ -50,6 +52,7 @@ metadata:
   annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - host: "colour.ko2.com"
     http:

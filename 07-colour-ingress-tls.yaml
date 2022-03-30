@@ -4,6 +4,7 @@ metadata:
   name: red-ingress
   namespace: red
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
       - red.ko2.com
@@ -28,6 +29,7 @@ metadata:
   name: green-ingress
   namespace: green
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
       - green.ko2.com
@@ -52,6 +54,7 @@ metadata:
   name: blue-ingress
   namespace: blue
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
       - blue.ko2.com
